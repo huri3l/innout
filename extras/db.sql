@@ -24,7 +24,7 @@ CREATE TABLE working_hours (
     CONSTRAINT cons_user_day UNIQUE (user_id, work_date)
 );
 
--- Essa senha criptografada corresponde ao valor "a"
+-- This encrypted password corresponds to "a"
 INSERT INTO users (id, name, password, email, start_date, end_date, is_admin)
 VALUES (1, 'Admin', '$2y$10$/vC1UKrEJQUZLN2iM3U9re/4DQP74sXCOVXlYXe/j9zuv1/MHD4o.', 'admin@cod3r.com.br', '2000-1-1', null, 1);
 
