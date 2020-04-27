@@ -1,6 +1,4 @@
 <?php
-loadModel('User');
-
 class Login extends Model{
 
     public function validate() {
@@ -9,6 +7,7 @@ class Login extends Model{
         if(!$this->email) {
             $errors['email'] = 'E-mail é um campo obrigatório.';
         }
+        
         if(!$this->password) {
             $errors['password'] = 'Senha é um campo obrigatório.';
         }

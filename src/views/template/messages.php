@@ -1,6 +1,7 @@
 <?php
 $errors = [];
 
+
 if($exception) {
     $message = [
         'type' => 'error',
