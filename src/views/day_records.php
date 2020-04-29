@@ -1,5 +1,5 @@
 <main class="content">
-        renderTitle(
+    <?php   renderTitle(
             'Registrar Ponto',
             'Mantenha seu ponto consistente!',
             'icofont-check-alt'
