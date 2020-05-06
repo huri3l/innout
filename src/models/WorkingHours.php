@@ -54,6 +54,7 @@ class WorkingHours extends Model {
             throw new AppException("Você já fez os quatro batimentos do dia!");
         }
         $this->$timeColumn = $time;
+        $this->worked_time = getSecondsFromDateInterval($this->getWorkedInterval());
         if($this->id) {
             $this->update();
         }
