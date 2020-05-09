@@ -6,7 +6,7 @@ if(isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 
-if($exception) {
+else if($exception) {
     $message = [
         'type' => 'error',
         'message' => $exception->getMessage()
