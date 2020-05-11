@@ -23,6 +23,14 @@ class User extends Model{
         if(!$this->end_date) $this->end_date = NULL;
         return parent::insert();
     }
+    
+    public function update() {
+        $this->validate();
+        $this->is_admin = $this->is_admin ? 1 : 0;
+        if(!$this->end_date) $this->end_date = NULL;
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        return parent::update();
+    }
 
     private function validate() {
         $errors = [];
@@ -45,8 +53,8 @@ class User extends Model{
             $errors['start_date'] = 'Data de Admissão deve seguir o padrão dd/mm/yyyy.';
         }
         
-        if(!DateTime::createFromFormat('Y-m-d', $this->end_date)) {
-            $errors['end_date'] = 'Data de Desligamento deve seguir o padrão dd/mm/yyyy.';
+        if($this->end_date && !DateTime::createFromFormat('Y-m-d', $this->end_date)) {
+            $errors['end_date'] = 'Data de Desligamento deve seguir o padrão dd/mm/aaaa.';
         }
 
         if(!$this->password) {
