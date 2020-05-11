@@ -83,7 +83,7 @@
         <div class="form-row">
             <div>
                 <button class="btn btn-lg btn-primary">Salvar</button>
-                <a class="btn btn-lg btn-secondary" href="/users.php">Cancelar</a>
+                <a class="btn btn-lg btn-secondary" href="/users.php">Voltar</a>
             </div>
         </div>
     </form>
