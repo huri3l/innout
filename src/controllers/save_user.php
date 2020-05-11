@@ -17,4 +17,4 @@ if(count($_POST) > 0 ){
     }
 }
 
-loadTemplateView('save-user',['exception' => $exception]);
+loadTemplateView('save-user', $_POST + ['exception' => $exception]);

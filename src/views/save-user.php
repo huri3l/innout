@@ -22,7 +22,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Informe o e-mail"
+                <input type="text" id="email" name="email" placeholder="Informe o e-mail"
                     class="form-control <?= $errors['email'] ? 'is-invalid' : '' ?>"
                     value="<?= $email ?>">
                 <div class="invalid-feedback">
@@ -40,12 +40,12 @@
                 </div>
             </div>
             <div class="form-group col-md-6">
-                <label for="confirm-password">Confirmação de Senha</label>
-                <input type="password" id="confirm-password" name="confirm-password" 
+                <label for="confirm_password">Confirmação de Senha</label>
+                <input type="password" id="confirm_password" name="confirm_password" 
                     placeholder="Confirme a senha"
-                    class="form-control <?= $errors['confirm-password'] ? 'is-invalid' : '' ?>">
+                    class="form-control <?= $errors['confirm_password'] ? 'is-invalid' : '' ?>">
                 <div class="invalid-feedback">
-                    <?= $errors['confirm-password'] ?>
+                    <?= $errors['confirm_password'] ?>
                 </div>
             </div>
         </div>
@@ -79,6 +79,8 @@
                     <?= $errors['is_admin'] ?>
                 </div>
             </div>
+        </div>
+        <div class="form-row">
             <div>
                 <button class="btn btn-lg btn-primary">Salvar</button>
                 <a class="btn btn-lg btn-secondary" href="/users.php">Cancelar</a>
