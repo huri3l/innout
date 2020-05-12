@@ -21,11 +21,8 @@ $alertType = '';
 
 if($message['type'] === 'error') {
     $alertType = 'danger';
-} else if($message['type'] === 'info') {
-    $alertType = 'info';
-} else if($message['type'] === 'warning') {
-    $alertType = 'warning';
-} else {
+}
+else {
     $alertType = 'success';
 }
 ?>

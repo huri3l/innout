@@ -1,6 +1,6 @@
 <?php
 session_start();
-requireValidSession();
+requireValidSession(true);
 
 $exception = NULL;
 $userData = [];
@@ -15,6 +15,7 @@ else if(count($_POST) > 0 ){
         $dbUser = new User($_POST);
         if(is_null($_POST['id']) || $_POST['id'] === '') {
             unset($_POST['id']);
+            var_dump($_POST['id']);
             $dbUser->insert();
             addSuccessMsg('Usuário cadastrado com sucesso!');
         }
