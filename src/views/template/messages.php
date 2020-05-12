@@ -6,7 +6,7 @@ if(isset($_SESSION['message'])) {
     unset($_SESSION['message']);
 }
 
-if($exception) {
+elseif($exception) {
     $message = [
         'type' => 'error',
         'message' => $exception->getMessage()
@@ -21,11 +21,8 @@ $alertType = '';
 
 if($message['type'] === 'error') {
     $alertType = 'danger';
-} else if($message['type'] === 'info') {
-    $alertType = 'info';
-} else if($message['type'] === 'warning') {
-    $alertType = 'warning';
-} else {
+}
+else {
     $alertType = 'success';
 }
 ?>
